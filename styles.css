@@ -213,3 +213,17 @@ footer:hover {
         align-items: center;
     }
 }
+/* Add this to the existing CSS file */
+
+/* Initial state of elements to be faded in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* When the element comes into view */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
