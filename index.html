@@ -105,5 +105,25 @@
     </footer>
 
     <script src="scripts.js"></script>
+
+    <script>
+    // Intersection Observer setup for fading in elements as they come into view
+    const fadeInElements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger animation when 50% of the element is in view
+    });
+
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+</script>
 </body>
 </html>
