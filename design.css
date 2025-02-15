@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #fafafa;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background-color: #003366;  /* Dark blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #f0f0f0;
+    margin-bottom: 30px;
+}
+
+.hero .cta-button {
+    background: linear-gradient(135deg, #ffffff, #e0e0e0); /* White to gray gradient */
+    color: #333;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero .cta-button:hover {
+    background: linear-gradient(135deg, #e0e0e0, #ffffff); /* Reverse gradient on hover */
+    transform: scale(1.1);
+}
+
+.intro, .key-features, .product-design, .technical-specs {
+    padding: 80px 15%;
+    color: #333;
+}
+
+.intro {
+    background-color: #e3f2fd; /* Light blue */
+}
+
+.key-features {
+    background: linear-gradient(135deg, #e0f7fa, #bbdefb); /* Soft gradient of light blues */
+}
+
+.product-design {
+    background-color: #f0f4c3; /* Soft pale yellow-green */
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.technical-specs {
+    background-color: #c8e6c9; /* Soft green */
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.intro-content, .key-features, .product-design, .technical-specs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-item, .spec-item {
+    margin-bottom: 50px;
+    text-align: center;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.feature-item img, .spec-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item:hover, .spec-item:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+.key-features h2, .technical-specs h2, .product-design h2 {
+    color: #003366; /* Dark blue */
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.product-design {
+    background: linear-gradient(135deg, #ffffff, #f0f4c3); /* Light gradient */
+}
+
+.product-design h2 {
+    color: #ff5722; /* Technological orange */
+    margin-bottom: 30px;
+}
+
+.product-design .design-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product-design .design-gallery img {
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #003366; /* Dark blue */
+    color: white;
+    padding: 60px 15%;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+footer:hover {
+    background-color: #004d40; /* Slight darkening of blue */
+}
+
+.social-links a {
+    margin: 0 15px;
+    color: white;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff5722; /* Technological orange */
+}
+
+.newsletter input {
+    padding: 12px;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.3s ease;
+}
+
+.newsletter input:focus {
+    border-color: #003366;
+    outline: none;
+}
+
+.newsletter button {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #ffffff, #e0e0e0); /* White to gray gradient */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.newsletter button:hover {
+    background: linear-gradient(135deg, #e0e0e0, #ffffff); /* Reverse gradient */
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+    .intro, .key-features, .product-design, .technical-specs {
+        padding: 60px 10%;
+    }
+    .product-design .design-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
